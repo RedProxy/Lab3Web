@@ -518,12 +518,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ```php
     // -- Hapus barang --
-else if (isset($_GET['id_barang']) && $_GET['aksi'] == "hapus") {
+  else if (isset($_GET['id_barang']) && $_GET['aksi'] == "hapus") {
 
     $id = $_GET['id_barang'];
     $query = "DELETE FROM data_barang WHERE id_barang = $id";
 
-    $result = mysqli_query($koneksi, $query);
+    $result = mysqli_query($conn, $query);
 
     header('location:index.php');
 }
